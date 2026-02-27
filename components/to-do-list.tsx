@@ -6,10 +6,7 @@ const ToDoList = ({ tasks }: { tasks: string[] }) => {
     <ScrollView>
       {/* First task completed, second task not, third task completed. i know i have it hard-coded and thats not optimal, but it works for this lab */}
       {tasks.map((task, index) => (
-        <Pressable
-          key={index}
-          style={[styles.task, index == 1 ? null : styles.completed]}
-        >
+        <Pressable key={index} style={styles.task}>
           <Text style={styles.taskText}>{task}</Text>
         </Pressable>
       ))}
